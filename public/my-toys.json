@@ -1,0 +1,38 @@
+[
+    {
+        "picture": "https://example.com/toy1.jpg",
+        "name": "Super Racing Car",
+        "seller_name": "Toylandia Store",
+        "seller_email": "toylandia@store.com",
+        "category_id": "1234",
+        "price": 29.99,
+        "rating": 4.5,
+        "available_quantity": 50,
+        "details": "A high-speed racing car with remote control.",
+        "json_format_version": "1.0"
+    },
+    {
+        "picture": "https://example.com/toy2.jpg",
+        "name": "Interactive Robot Buddy",
+        "seller_name": "RoboFun Inc.",
+        "seller_email": "info@robofun.com",
+        "category_id": "5678",
+        "price": 39.99,
+        "rating": 4.8,
+        "available_quantity": 25,
+        "details": "A friendly and smart robot that can talk, dance, and play games with kids.",
+        "json_format_version": "1.0"
+    },
+    {
+        "picture": "https://example.com/toy3.jpg",
+        "name": "Artistic Building Blocks",
+        "seller_name": "Creative Toys Co.",
+        "seller_email": "sales@creativetoys.com",
+        "category_id": "9123",
+        "price": 19.99,
+        "rating": 4.3,
+        "available_quantity": 100,
+        "details": "Colorful and versatile building blocks to inspire creativity in children.",
+        "json_format_version": "1.0"
+    }
+]
