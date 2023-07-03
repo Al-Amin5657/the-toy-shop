@@ -21,7 +21,7 @@
         "price": 39.99,
         "rating": 4.8,
         "available_quantity": 25,
-        "details": "Toy shops typically categorize toys based on age groups, making it easier for customers to find age-appropriate products for their children.",
+        "details": "Toy shops typically categorize toys based on age groups, making it easier for customers to find age-appropriate products for their children."
     },
     {
         "_id": "3",
@@ -33,7 +33,7 @@
         "price": 19.99,
         "rating": 4.3,
         "available_quantity": 100,
-        "details": "Many toy shops adjust their inventory to match seasonal demand, offering holiday-themed toys during festive periods like Christmas or Halloween.",
+        "details": "Many toy shops adjust their inventory to match seasonal demand, offering holiday-themed toys during festive periods like Christmas or Halloween."
     },
     {
         "_id": "4",
