@@ -1,7 +1,8 @@
-import React from 'react';
+
+import { Link } from 'react-router-dom';
 
 const AllToyCard = ({ allToy }) => {
-    const { picture, name, price, rating } = allToy;
+    const { _id, picture, name, price, rating } = allToy;
     return (
         <div className="card w-96 bg-base-100 shadow-xl">
             <figure className="px-10 pt-10">
@@ -17,7 +18,9 @@ const AllToyCard = ({ allToy }) => {
 
                 </div>
                 <div className="card-actions">
-                    <button className="btn btn-primary">Buy Now</button>
+                    <Link to={`/addedToys/${_id}`}>
+                        <button className="btn btn-primary">View Details</button>
+                    </Link>
                 </div>
             </div>
         </div>

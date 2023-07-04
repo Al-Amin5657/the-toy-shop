@@ -1,12 +1,14 @@
 
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import img from '../../assets/images/login.svg'
+import { useContext } from 'react';
+import { AuthContext } from '../../Providers/AuthProvider';
 
 const Login = () => {
-    // const { signUp } = useContext(AuthContext);
-    // const location = useLocation();
-    // const navigate = useNavigate();
-    // const from = location.state?.from?.pathname || "/";
+    const { signIn } = useContext(AuthContext);
+    const location = useLocation();
+    const navigate = useNavigate();
+    const from = location.state?.from?.pathname || "/";
 
 
     const handleLogin = event => {
@@ -16,13 +18,13 @@ const Login = () => {
         const password = form.password.value;
         console.log(email, password);
 
-        // signUp(email, password)
-        //     .then(result => {
-        //         const user = result.user;
-        //         console.log(user);
-        //         navigate(from, { replace: true });
-        //     })
-        //     .catch(error => console.log(error));
+        signIn(email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+                navigate(from, { replace: true });
+            })
+            .catch(error => console.log(error));
     }
     return (
         <div className="hero min-h-screen bg-base-200">

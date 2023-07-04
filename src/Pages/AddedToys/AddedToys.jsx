@@ -1,0 +1,66 @@
+import React, { useContext } from 'react';
+import { useLoaderData } from 'react-router-dom';
+import { AuthContext } from '../../Providers/AuthProvider';
+
+const AddedToys = () => {
+    const addedToys = useLoaderData();
+    const { user } = useContext(AuthContext);
+    const { _id, name, seller_name, sub_category, price, available_quantity, } = addedToys;
+
+    const handleBuyToys = event => {
+        event.preventDefault();
+        const form = event.target;
+        const name = form.name.value;
+        const email = user?.email;
+        const seller = form.seller.value;
+        const subCategory = form.subCategory.value;
+        const price = form.price.value;
+        const quantity = form.quantity.value;
+        const addedToy = {
+            customerName: name,
+            email,
+            seller,
+            subCategory,
+            quantity,
+            category_id: _id,
+            price: price
+        }
+        console.log(addedToy);
+
+
+    }
+    return (
+        <div className="card-body">
+            <h3 className="text-center text-3xl font-bold mb-4">Toy Name: {name}</h3>
+            <form onSubmit={handleBuyToys}>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <div className="form-control">
+                        <input type="text" name="name" defaultValue={user?.displayName} placeholder="Name" className="input input-bordered" />
+                    </div>
+                    <div className="form-control">
+                        <input type="text" name="seller" defaultValue={seller_name} placeholder="seller" className="input input-bordered" />
+
+                    </div>
+                    <div className="form-control">
+                        <input type="text" name="subCategory" defaultValue={sub_category} placeholder="sub-category" className="input input-bordered" />
+                    </div>
+                    <div className="form-control">
+                        <input type="text" name="price" defaultValue={'$' + price} placeholder="Due Amount" className="input input-bordered" />
+
+                    </div>
+                    <div className="form-control">
+                        <input type="text" name="quantity" defaultValue={available_quantity} placeholder="available_quantity" className="input input-bordered" />
+                    </div>
+                    <div className="form-control">
+                        <input type="text" name="email" defaultValue={user?.email} placeholder="available_quantity" className="input input-bordered" />
+                    </div>
+                </div>
+                <div className="form-control mt-6">
+                    <input className="btn btn-primary btn-block" type="submit" value="Add Your Toys" />
+                </div>
+            </form>
+        </div>
+    );
+};
+
+export default AddedToys;
