@@ -1,6 +1,5 @@
 [
     {
-        "_id": "1",
         "picture": "https://i.ibb.co/s5CRKsC/physics-1.jpg",
         "name": "Telegraph Kit",
         "seller_name": "Wonder Toys",
@@ -12,7 +11,6 @@
         "details": "Toy shops offer a vast selection of toys and playthings designed to entertain, educate, and engage children. Some toy shops may also sell baby products, nursery items, and children's books."
     },
     {
-        "_id": "2",
         "picture": "https://i.ibb.co/tLXpzrw/physics-2.jpg",
         "name": "Battle Bots",
         "seller_name": "Playful Pals.",
@@ -24,7 +22,6 @@
         "details": "Toy shops typically categorize toys based on age groups, making it easier for customers to find age-appropriate products for their children."
     },
     {
-        "_id": "3",
         "picture": "https://i.ibb.co/bbw2WpP/physics-3.jpg",
         "name": "Poly Density Kit",
         "seller_name": "Toylandia",
@@ -36,7 +33,6 @@
         "details": "Many toy shops adjust their inventory to match seasonal demand, offering holiday-themed toys during festive periods like Christmas or Halloween."
     },
     {
-        "_id": "4",
         "picture": "https://i.ibb.co/41kLHgL/physics-4.jpg",
         "name": "Catapult Kit",
         "seller_name": "Enchanted Toys",
@@ -48,7 +44,6 @@
         "details": "Gift Wrapping and Personalization: Many toy shops offer gift-wrapping services, making them popular places to find gifts for birthdays, baby showers, and other occasions."
     },
     {
-        "_id": "5",
         "picture": "https://i.ibb.co/n11TDJs/physics-5.jpg",
         "name": "Feel Flux",
         "seller_name": "Rainbow Toy Co.",
@@ -60,7 +55,6 @@
         "details": "Toy shops often stock toys that promote learning and development in areas such as STEM (Science, Technology, Engineering, Mathematics), creativity, language skills, and problem-solving."
     },
     {
-        "_id": "6",
         "picture": "https://i.ibb.co/Z12ShYc/chemistry-1.jpg",
         "name": "Chemistry Lab",
         "seller_name": "Happy Tots Emporium",
@@ -72,7 +66,6 @@
         "details": "Toy shops often stock toys that promote learning and development in areas such as STEM (Science, Technology, Engineering, Mathematics), creativity, language skills, and problem-solving."
     },
     {
-        "_id": "7",
         "picture": "https://i.ibb.co/GF9WtQX/chemistry-2.jpg",
         "name": "Mysterious Potions",
         "seller_name": "Rainbow Toy Co.",
@@ -84,7 +77,6 @@
         "details": "Toy shops often stock toys that promote learning and development in areas such as STEM (Science, Technology, Engineering, Mathematics), creativity, language skills, and problem-solving."
     },
     {
-        "_id": "8",
         "picture": "https://i.ibb.co/vPxRGgk/chemistry-3.webp",
         "name": "Wizard Science",
         "seller_name": "Rainbow Toy Co.",
@@ -96,7 +88,6 @@
         "details": "Toy shops often stock toys that promote learning and development in areas such as STEM (Science, Technology, Engineering, Mathematics), creativity, language skills, and problem-solving."
     },
     {
-        "_id": "9",
         "picture": "https://i.ibb.co/6H5VHjH/chemistry-4.jpg",
         "name": "Candle Factory",
         "seller_name": "Rainbow Toy Co.",
@@ -108,7 +99,6 @@
         "details": "Toy shops often stock toys that promote learning and development in areas such as STEM (Science, Technology, Engineering, Mathematics), creativity, language skills, and problem-solving."
     },
     {
-        "_id": "10",
         "picture": "https://i.ibb.co/Q9sTrjS/bio-1.png",
         "name": "DNA Model",
         "seller_name": "Starshine Toys",
@@ -120,7 +110,6 @@
         "details": "Toy shops often stock toys that promote learning and development in areas such as STEM (Science, Technology, Engineering, Mathematics), creativity, language skills, and problem-solving."
     },
     {
-        "_id": "11",
         "picture": "https://i.ibb.co/xHGyJ6P/bio-2.png",
         "name": "Ecology",
         "seller_name": "Starshine Toys",
@@ -132,7 +121,6 @@
         "details": "Toy shops often stock toys that promote learning and development in areas such as STEM (Science, Technology, Engineering, Mathematics), creativity, language skills, and problem-solving."
     },
     {
-        "_id": "12",
         "picture": "https://i.ibb.co/cJpcSJq/bio-3.png",
         "name": "T2 Virus",
         "seller_name": "Starshine Toys",
@@ -144,7 +132,6 @@
         "details": "Toy shops often stock toys that promote learning and development in areas such as STEM (Science, Technology, Engineering, Mathematics), creativity, language skills, and problem-solving."
     },
     {
-        "_id": "13",
         "picture": "https://i.ibb.co/MgcWLSR/bio-4.png",
         "name": "Plant Cell",
         "seller_name": "Starshine Toys",
@@ -156,7 +143,6 @@
         "details": "Toy shops often stock toys that promote learning and development in areas such as STEM (Science, Technology, Engineering, Mathematics), creativity, language skills, and problem-solving."
     },
     {
-        "_id": "14",
         "picture": "https://i.ibb.co/j85FZX3/engineering-1.jpg",
         "name": "Robotic Car",
         "seller_name": "Whimsy Wonderland",
@@ -168,7 +154,6 @@
         "details": "Toy shops often stock toys that promote learning and development in areas such as STEM (Science, Technology, Engineering, Mathematics), creativity, language skills, and problem-solving."
     },
     {
-        "_id": "15",
         "picture": "https://i.ibb.co/ZfzJjKt/engineering-2.jpg",
         "name": "Engineering ",
         "seller_name": "Whimsy Wonderland",
@@ -180,7 +165,6 @@
         "details": "Toy shops often stock toys that promote learning and development in areas such as STEM (Science, Technology, Engineering, Mathematics), creativity, language skills, and problem-solving."
     },
     {
-        "_id": "16",
         "picture": "https://i.ibb.co/B4P92NH/engineering-3.jpg",
         "name": "Engineering",
         "seller_name": "Whimsy Wonderland",
@@ -192,7 +176,6 @@
         "details": "Toy shops often stock toys that promote learning and development in areas such as STEM (Science, Technology, Engineering, Mathematics), creativity, language skills, and problem-solving."
     },
     {
-        "_id": "17",
         "picture": "https://i.ibb.co/yFc9MLy/engineering-4.jpg",
         "name": "Engineering",
         "seller_name": "Whimsy Wonderland",
@@ -204,7 +187,6 @@
         "details": "Toy shops often stock toys that promote learning and development in areas such as STEM (Science, Technology, Engineering, Mathematics), creativity, language skills, and problem-solving."
     },
     {
-        "_id": "18",
         "picture": "https://i.ibb.co/KsRwh3W/math-1.jpg",
         "name": "Math Toy",
         "seller_name": "Toy Galaxy",
@@ -216,7 +198,6 @@
         "details": "Toy shops often stock toys that promote learning and development in areas such as STEM (Science, Technology, Engineering, Mathematics), creativity, language skills, and problem-solving."
     },
     {
-        "_id": "19",
         "picture": "https://i.ibb.co/7gL390w/math-2.jpg",
         "name": "Math Toy",
         "seller_name": "Toy Galaxy",
@@ -228,7 +209,6 @@
         "details": "Toy shops often stock toys that promote learning and development in areas such as STEM (Science, Technology, Engineering, Mathematics), creativity, language skills, and problem-solving."
     },
     {
-        "_id": "20",
         "picture": "https://i.ibb.co/7G7XMw8/math-3.jpg",
         "name": "Math Toy",
         "seller_name": "Toy Galaxy",
@@ -240,7 +220,6 @@
         "details": "Toy shops often stock toys that promote learning and development in areas such as STEM (Science, Technology, Engineering, Mathematics), creativity, language skills, and problem-solving."
     },
     {
-        "_id": "21",
         "picture": "https://i.ibb.co/XsCFzTb/math-4.jpg",
         "name": "Math Toy",
         "seller_name": "Toy Galaxy",

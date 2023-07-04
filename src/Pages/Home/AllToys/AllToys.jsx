@@ -5,7 +5,7 @@ const AllToys = () => {
     const [allToys, setAllToys] = useState([]);
 
     useEffect(() => {
-        fetch('myToys.json')
+        fetch('http://localhost:5000/products')
             .then(res => res.json())
             .then(data => setAllToys(data))
     }, [])
