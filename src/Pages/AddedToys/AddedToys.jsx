@@ -1,11 +1,11 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProvider';
 
 const AddedToys = () => {
     const addedToys = useLoaderData();
     const { user } = useContext(AuthContext);
-    const { _id, name, seller_name, sub_category, price, available_quantity, } = addedToys;
+    const { _id, name, seller_name, sub_category, price, available_quantity, picture } = addedToys;
 
     const handleBuyToys = event => {
         event.preventDefault();
@@ -20,6 +20,7 @@ const AddedToys = () => {
             customerName: name,
             email,
             seller,
+            picture,
             subCategory,
             quantity,
             category_id: _id,
@@ -27,7 +28,20 @@ const AddedToys = () => {
         }
         console.log(addedToy);
 
-
+        fetch('http://localhost:5000/myToys', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(addedToy)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.insertedId) {
+                    alert('Toy added successfully')
+                }
+            })
     }
     return (
         <div className="card-body">
