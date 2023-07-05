@@ -5,21 +5,21 @@ import { AuthContext } from '../../Providers/AuthProvider';
 const AddedToys = () => {
     const addedToys = useLoaderData();
     const { user } = useContext(AuthContext);
-    const { _id, name, seller_name, sub_category, price, available_quantity, picture } = addedToys;
+    const { _id, name, sub_category, price, available_quantity, picture } = addedToys;
 
     const handleBuyToys = event => {
         event.preventDefault();
         const form = event.target;
         const name = form.name.value;
         const email = user?.email;
-        const seller = form.seller.value;
+        const date = form.date.value;
         const subCategory = form.subCategory.value;
         const price = form.price.value;
         const quantity = form.quantity.value;
         const addedToy = {
             customerName: name,
             email,
-            seller,
+            date,
             picture,
             subCategory,
             quantity,
@@ -52,7 +52,7 @@ const AddedToys = () => {
                         <input type="text" name="name" defaultValue={user?.displayName} placeholder="Name" className="input input-bordered" />
                     </div>
                     <div className="form-control">
-                        <input type="text" name="seller" defaultValue={seller_name} placeholder="seller" className="input input-bordered" />
+                        <input type="date" name="date" placeholder="Date" className="input input-bordered" />
 
                     </div>
                     <div className="form-control">
