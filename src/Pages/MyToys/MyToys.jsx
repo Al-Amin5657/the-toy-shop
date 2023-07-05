@@ -34,6 +34,28 @@ const MyToys = () => {
         }
     }
 
+    const handleApprove = id => {
+        fetch(`http://localhost:5000/myToys/${id}`, {
+            method: 'PATCH',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify({ status: 'Approve' })
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.modifiedCount > 0) {
+                    // update
+                    const remaining = myToys.filter(myToy => myToy._id !== id);
+                    const updated = myToys.find(myToy => myToy._id === id);
+                    updated.status = 'Approved';
+                    const newToy = [updated, ...remaining];
+                    setMyToys(newToy);
+                }
+            })
+    }
+
 
 
     return (
@@ -53,7 +75,7 @@ const MyToys = () => {
                             <th>Email</th>
                             <th>Sub-Category</th>
                             <th>Price</th>
-                            <th>Delete</th>
+                            <th>Status</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -62,6 +84,7 @@ const MyToys = () => {
                                 key={toy._id}
                                 toy={toy}
                                 handleDelete={handleDelete}
+                                handleApprove={handleApprove}
                             ></MyToysRow>)
                         }
                     </tbody>

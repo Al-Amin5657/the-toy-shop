@@ -1,23 +1,8 @@
 
-const MyToysRow = ({ toy }) => {
-    const { _id, picture, customerName, subCategory, seller, price, quantity, email } = toy;
+const MyToysRow = ({ toy, handleDelete, handleApprove }) => {
+    const { _id, picture, customerName, subCategory, seller, price, quantity, email, status } = toy;
 
-    const handleDelete = id => {
-        const proceed = confirm('Are you sure you want to delete?');
-        if (proceed) {
-            fetch(`http://localhost:5000/myToys/${id}`, {
-                method: 'DELETE',
-            })
-                .then(res => res.json())
-                .then(data => {
-                    console.log(data);
-                    if (data.deletedCount > 0) {
-                        alert('Deleted Successful');
-                    }
 
-                });
-        }
-    }
     return (
 
 
@@ -52,7 +37,9 @@ const MyToysRow = ({ toy }) => {
             </td>
             <td>Price: &{price}</td>
             <th>
-                <button className="btn btn-ghost btn-xs">details</button>
+                {status === 'Approved' ? <span className="font-bold text-primary">Approved</span>
+                    : <button onClick={() => handleApprove(_id)} className="btn btn-ghost btn-xs">Please Approve</button>
+                }
             </th>
         </tr>
 
