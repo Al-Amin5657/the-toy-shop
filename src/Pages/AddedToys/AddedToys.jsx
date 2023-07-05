@@ -17,7 +17,7 @@ const AddedToys = () => {
         const price = form.price.value;
         const quantity = form.quantity.value;
         const addedToy = {
-            customerName: name,
+            name: name,
             email,
             date,
             picture,
@@ -49,7 +49,7 @@ const AddedToys = () => {
             <form onSubmit={handleBuyToys}>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                     <div className="form-control">
-                        <input type="text" name="name" defaultValue={user?.displayName} placeholder="Name" className="input input-bordered" />
+                        <input type="text" name="name" defaultValue={name} placeholder="Name" className="input input-bordered" />
                     </div>
                     <div className="form-control">
                         <input type="date" name="date" placeholder="Date" className="input input-bordered" />
