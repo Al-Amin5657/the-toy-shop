@@ -12,10 +12,10 @@ const AllMyToys = () => {
     return (
         <div>
             <h3>All Toys: {allToys.length}</h3>
-            <div className="overflow-x-auto">
+            <div className="overflow-x-auto mb-8">
                 <table className="table table-xs">
                     <thead>
-                        <tr>
+                        <tr className="bg bg-info">
                             <th></th>
                             <th>Seller</th>
                             <th>Name</th>

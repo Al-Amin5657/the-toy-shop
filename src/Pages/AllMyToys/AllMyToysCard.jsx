@@ -4,7 +4,11 @@ const AllMyToysCard = ({ allToy }) => {
     return (
 
         <tr>
-            <th>1</th>
+            <th>
+                <label>
+                    <input type="checkbox" className="checkbox" />
+                </label>
+            </th>
             <td>{seller}</td>
             <td>{name}</td>
             <td>{subCategory}</td>
