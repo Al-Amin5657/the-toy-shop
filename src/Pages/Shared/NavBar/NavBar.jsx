@@ -17,11 +17,8 @@ const NavBar = () => {
         <li><Link to="/allMyToys">All Toys</Link></li>
         <li><Link to="/addToy">Add A Toy</Link></li>
         <li><Link to="/blogs">Blogs</Link></li>
-        {user?.email ? <>
-            <li><Link to="/myToys">My Toys</Link></li>
-            <li><button onClick={handleLogOut} className='btn btn-info pt-4'>Log Out</button></li>
-        </>
-            : <li><Link to="/logIn"><button className=''>LogIn</button></Link></li>}
+        <li><Link to="/myToys">My Toys</Link></li>
+
 
 
     </>
@@ -42,15 +39,22 @@ const NavBar = () => {
                     <img style={{ width: '150px', }} src={logo} alt="" />
                 </Link>
             </div>
-            <div className="navbar-end hidden lg:flex">
+            <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 font-medium">
                     {navItems}
                 </ul>
             </div>
-            {/* <div className="navbar-end">
+            <div className="navbar-end">
+                {user &&
+                    <img style={{ height: '40px', width: '40px', borderRadius: '50%' }} src={user?.photoURL ? user.photoURL : "https://i.insider.com/5d9b69ec6932a04a08575612?width=700"} alt="" title={user?.displayName} />
+                }
 
-                <a className="btn">Button</a>
-            </div> */}
+                {user?.email ? <>
+                    <button onClick={handleLogOut} className='btn btn-info ms-4'>Log Out</button>
+                </>
+                    : <Link to="/logIn"><button className="btn btn-outline btn-accent">Log In</button></Link>
+                }
+            </div>
         </div>
     );
 };

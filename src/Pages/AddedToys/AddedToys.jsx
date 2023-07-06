@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProvider';
 import { FaStar, } from 'react-icons/fa';
+import Featured from '../../Layout/Featured';
 
 
 
@@ -24,48 +25,10 @@ const AddedToys = () => {
                     <li>Mathematics Toy</li>
                 </ul>
                 <h2 className='text-3xl mb-5 p-3'>Feature Products</h2>
-                <div className='flex gap-4 mb-8'>
-                    <img className='w-1/2 ps-4' src="https://upload.wikimedia.org/wikipedia/commons/3/32/Lego_Color_Bricks.jpg" alt="" />
-                    <div>
-                        <p>Building Block</p>
-                        <p>$25.35</p>
-                        <div className='flex text-warning'>
-                            <p><FaStar></FaStar></p>
-                            <p><FaStar></FaStar></p>
-                            <p><FaStar></FaStar></p>
-                            <p><FaStar></FaStar></p>
-                            <p><FaStar></FaStar></p>
-                        </div>
-                    </div>
-                </div>
-                <div className='flex gap-4 mb-8'>
-                    <img className='w-1/2 ps-4' src="https://i.ibb.co/S0G19Zg/education-1.jpg" alt="" />
-                    <div>
-                        <p>Engadget</p>
-                        <p>$29.35</p>
-                        <div className='flex text-warning'>
-                            <p><FaStar></FaStar></p>
-                            <p><FaStar></FaStar></p>
-                            <p><FaStar></FaStar></p>
-                            <p><FaStar></FaStar></p>
-                            <p><FaStar></FaStar></p>
-                        </div>
-                    </div>
-                </div>
-                <div className='flex gap-4'>
-                    <img className='w-1/2 h-32 ps-4' src="https://i.ibb.co/9yqjrBb/edu-4.jpg" alt="" />
-                    <div>
-                        <p>Number Cognition</p>
-                        <p>$24.35</p>
-                        <div className='flex text-warning'>
-                            <p><FaStar></FaStar></p>
-                            <p><FaStar></FaStar></p>
-                            <p><FaStar></FaStar></p>
-                            <p><FaStar></FaStar></p>
-                            <p><FaStar></FaStar></p>
-                        </div>
-                    </div>
-                </div>
+                <Featured name="Building Block" price="$25.35" image="https://upload.wikimedia.org/wikipedia/commons/3/32/Lego_Color_Bricks.jpg"></Featured>
+                <Featured name="Engadget" price="$35.35" image="https://i.ibb.co/S0G19Zg/education-1.jpg"></Featured>
+                <Featured name="Number Cognition" price="$45.35" image="https://i.ibb.co/9yqjrBb/edu-4.jpg"></Featured>
+
             </div>
 
             <div className='col-span-2 ms-6'>
