@@ -1,10 +1,12 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import img from '../../assets/images/login.svg'
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { AuthContext } from '../../Providers/AuthProvider';
 
 const SignUp = () => {
-
+    const [error, setError] = useState('');
+    const [success, setSuccess] = useState('');
+    const navigate = useNavigate();
     const { createUser } = useContext(AuthContext)
 
 
@@ -13,13 +15,24 @@ const SignUp = () => {
         const form = event.target;
         const name = form.name.value;
         const email = form.email.value;
+        const photo = form.photo.value;
         const password = form.password.value;
-        console.log(name, email, password);
+        console.log(name, email, password, photo);
+
+        setError('')
+
+        if (password.length < 6) {
+            setError('Password should be at least six characters');
+            return;
+
+        }
 
         createUser(email, password)
             .then(result => {
                 const user = result.user;
                 console.log(user);
+                navigate('/');
+                setSuccess('Sign Up Successful')
             })
             .catch(error => console.log(error))
     }
@@ -47,6 +60,12 @@ const SignUp = () => {
                             </div>
                             <div className="form-control">
                                 <label className="label">
+                                    <span className="label-text">Photo-URL</span>
+                                </label>
+                                <input type="text" name='photo' placeholder="Photo-URL" className="input input-bordered" />
+                            </div>
+                            <div className="form-control">
+                                <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
                                 <input type="password" name='password' placeholder="password" className="input input-bordered" />
@@ -60,6 +79,8 @@ const SignUp = () => {
                         </form>
                         <button className='my-4 text-center'>Already have an account? <Link className='text-orange-600 font-bold' to="/login">Login</Link>
                         </button>
+                        <p className='text-red-500'>{error}</p>
+                        <p className='text-green-500'>{success}</p>
 
                     </div>
                 </div>
