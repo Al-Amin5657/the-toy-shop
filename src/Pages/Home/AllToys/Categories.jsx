@@ -9,7 +9,7 @@ const Categories = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/categories')
+        fetch('https://the-toy-shop-server.vercel.app/categories')
             .then(res => res.json())
             .then(data => setToyCategories(data))
             .catch(error => {

@@ -30,7 +30,7 @@ const AllToyCard = ({ allToy }) => {
 
                 </div>
                 <div className="card-actions">
-                    <Link to={`/addedToys/${_id}`}>
+                    <Link to={`/addedToys/${_id}`} >
                         <button className="btn btn-info text-white">View Details</button>
                     </Link>
                 </div>

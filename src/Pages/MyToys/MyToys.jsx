@@ -5,9 +5,10 @@ import MyToysRow from './MyToysRow';
 const MyToys = () => {
     const { user } = useContext(AuthContext);
     const [myToys, setMyToys] = useState([]);
+    console.log(myToys);
 
 
-    const url = `http://localhost:5000/myToys?email=${user?.email}`
+    const url = `https://the-toy-shop-server.vercel.app/myToys?email=${user?.email}`
 
     useEffect(() => {
         fetch(url)
@@ -18,7 +19,7 @@ const MyToys = () => {
     const handleDelete = id => {
         const proceed = confirm('Are you sure you want to delete?');
         if (proceed) {
-            fetch(`http://localhost:5000/myToys/${id}`, {
+            fetch(`https://the-toy-shop-server.vercel.app/myToys/${id}`, {
                 method: 'DELETE',
             })
                 .then(res => res.json())
@@ -35,7 +36,7 @@ const MyToys = () => {
     }
 
     const handleApprove = id => {
-        fetch(`http://localhost:5000/myToys/${id}`, {
+        fetch(`https://the-toy-shop-server.vercel.app/myToys/${id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'

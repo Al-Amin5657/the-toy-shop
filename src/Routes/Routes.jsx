@@ -41,8 +41,8 @@ const router = createBrowserRouter([
             },
             {
                 path: 'addedToys/:id',
-                element: <AddedToys></AddedToys>,
-                loader: ({ params }) => fetch(`http://localhost:5000/products/${params.id}`)
+                element: <PrivateRoute><AddedToys></AddedToys></PrivateRoute>,
+                loader: ({ params }) => fetch(`https://the-toy-shop-server.vercel.app/products/${params.id}`)
             },
             {
                 path: 'myToys',
@@ -52,6 +52,12 @@ const router = createBrowserRouter([
                 path: 'allMyToys',
                 element: <PrivateRoute><AllMyToys></AllMyToys></PrivateRoute>
             },
+            {
+                path: '*',
+                element: <div>
+                    <img className="mb-8" src="https://wpklik.com/wp-content/uploads/2019/03/A-404-Page-Best-Practices-and-Design-Inspiration.jpg" alt="" />
+                </div>
+            }
         ]
     }
 ]);

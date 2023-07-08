@@ -1,6 +1,6 @@
 
 const AllMyToysCard = ({ allToy }) => {
-    const { seller, name, subCategory, quantity, price } = allToy;
+    const { seller_name, name, categoryName, available_quantity, price } = allToy;
     return (
 
         <tr>
@@ -9,10 +9,10 @@ const AllMyToysCard = ({ allToy }) => {
                     <input type="checkbox" className="checkbox" />
                 </label>
             </th>
-            <td>{seller}</td>
+            <td>{seller_name}</td>
             <td>{name}</td>
-            <td>{subCategory}</td>
-            <td>{quantity}</td>
+            <td>{categoryName}</td>
+            <td>{available_quantity}</td>
             <td>{price}</td>
             <td>View Detail</td>
         </tr>

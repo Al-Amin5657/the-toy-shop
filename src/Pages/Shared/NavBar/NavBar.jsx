@@ -17,7 +17,7 @@ const NavBar = () => {
         <li><Link to="/allMyToys">All Toys</Link></li>
         <li><Link to="/addToy">Add A Toy</Link></li>
         <li><Link to="/blogs">Blogs</Link></li>
-        <li><Link to="/myToys">My Toys</Link></li>
+
 
 
 
@@ -40,19 +40,22 @@ const NavBar = () => {
                 </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
+
+            </div>
+            <div className="navbar-end">
                 <ul className="menu menu-horizontal px-1 font-medium">
                     {navItems}
                 </ul>
-            </div>
-            <div className="navbar-end">
-                {user &&
-                    <img style={{ height: '40px', width: '40px', borderRadius: '50%' }} src={user?.photoURL ? user.photoURL : "https://i.insider.com/5d9b69ec6932a04a08575612?width=700"} alt="" title={user?.displayName} />
-                }
+
 
                 {user?.email ? <>
-                    <button onClick={handleLogOut} className='btn btn-info ms-4'>Log Out</button>
+                    <Link to="/myToys">My Toys</Link>
+                    <button onClick={handleLogOut} className='btn btn-info text-white ms-4'>Log Out</button>
                 </>
                     : <Link to="/logIn"><button className="btn btn-outline btn-accent">Log In</button></Link>
+                }
+                {user &&
+                    <img className='ms-4 w-10 h-10 rounded-full' src={user?.photoURL ? user.photoURL : "https://i.insider.com/5d9b69ec6932a04a08575612?width=700"} alt="" title={user?.displayName} />
                 }
             </div>
         </div>

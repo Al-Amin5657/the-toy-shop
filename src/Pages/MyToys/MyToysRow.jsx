@@ -1,6 +1,6 @@
 
 const MyToysRow = ({ toy, handleDelete, handleApprove }) => {
-    const { _id, picture, customerName, subCategory, seller, price, quantity, email, status } = toy;
+    const { _id, picture, customerName, categoryName, seller, price, quantity, email, status } = toy;
 
 
     return (
@@ -32,10 +32,10 @@ const MyToysRow = ({ toy, handleDelete, handleApprove }) => {
             </td>
             <td>
                 <div>
-                    {subCategory}
+                    {categoryName}
                 </div>
             </td>
-            <td>Price: &{price}</td>
+            <td>Price: ${price}</td>
             <th>
                 {status === 'Approved' ? <span className="font-bold text-primary">Approved</span>
                     : <button onClick={() => handleApprove(_id)} className="btn btn-ghost btn-xs">Please Approve</button>
